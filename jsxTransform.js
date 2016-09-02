@@ -32,7 +32,7 @@ function transform(jsx) {
 		}).replace(/^[\t ]*(?=<)/mg, function(x) {
 			return x + "'";
 		}).replace(/^\s*$/mg, '')	// 去空行
-		.replace(/\n/mg, "',\n")		// 行末尾加',
+		.replace(/\r?\n/mg, "',\n")		// 行末尾加',
 		.replace(/$/g, "'");			// 末尾加'
 	}
 }
