@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+		<script src="//cdn.bootcss.com/es5-shim/4.5.9/es5-shim.js"></script>
+		
+		
+		<script src="../node_modules/bon-template/src/bon.js"></script>
+		
+		<script src="../publish/ext-require.js"></script>
+		<script src="../publish/core.js"></script>
+		<script src="../publish/all.js"></script>
+		
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			a {
+				height: 30px;
+				display: inline-block;
+			}
+			li {
+				list-style: none;
+			}
+			#left {
+				width: 200px;
+				height: 100%;
+				position: absolute;
+				border: 1PX BLUE SOLID;
+			}
+			#left ul li a{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+			}
+			#left ul li a:hover{
+				background: #066;
+				color: white;
+			}
+			
+			#center {
+				margin-left: 204px;
+				height: 100%;
+				border: 1PX BLUE SOLID;
+			}
+			
+			label {
+				display: inline-block;
+				width: 50px;
+				text-align: right;
+			}
+			
+			.title {
+				font-weight: bold;
+				background-color: #066;
+				height: 20px;
+				padding: 3px;
+				font-size: 15px;
+				color: white;
+			}
+			
+			[widget='js.module.UserEdit'] ul li{
+				padding: 3px;
+			}
+			
+			[widget='js.module.UserList'] ul li{
+				width: 30%;
+				border: 0px;
+				display: inline-block;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id=a></div>
+		
+		<script>
+		
+			Ext.Loader.setConfig({
+				disableCaching: false,
+				renderTo: 'a'
+			});
+			
+			Ext.create('business.module.Dog');
+	
+		</script>
+	</body>
+</html>
