@@ -73,7 +73,7 @@ elixir(function (mix) {
     
     
     mix.scripts([
-        'core/bon.js',
+        '../../node_modules/bon-template/src/bon.js',
         'core/Event.js',
         'core/RoleMap.js',
         'core/Observable.js',

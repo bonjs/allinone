@@ -11,7 +11,7 @@ Ext.define('business.module.Dog', {
 		children: [
 			{dogName: 'a1'},
 			{dogName: 'a2'},
-			{dogName: 'a3'},
+			{dogName: 'a3'}
 		]
 	},
 	template: [
@@ -25,6 +25,5 @@ Ext.define('business.module.Dog', {
 	],
 	constructor: function() {
 		this.callParent(arguments);
-		console.log('init');
 	}
 });
