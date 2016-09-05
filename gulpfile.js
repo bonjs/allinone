@@ -90,8 +90,5 @@ elixir(function (mix) {
     
 	
 	mix.js(['business/module/Dog.js'], './publish/all.js');
-
     
 });
-
-

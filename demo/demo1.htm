@@ -83,13 +83,10 @@
 		<div id=a></div>
 		
 		<script>
-		
-			Ext.Loader.setConfig({
-				disableCaching: false,
+			
+			Ext.create('business.module.Dog', {
 				renderTo: 'a'
 			});
-			
-			Ext.create('business.module.Dog');
 	
 		</script>
 	</body>

@@ -49,7 +49,7 @@ Ext.define('core.Component', {
 	onRender : function(container, position) {
 		
 		this.template = this.template.constructor == Array ? this.template.join('') : this.template;
-		this.template = this.substitute(this.template, this.data);
+		this.template = bon.render(this.data, this.template);
 		
 		this.el.innerHTML = this.template;
 	
@@ -76,14 +76,6 @@ Ext.define('core.Component', {
 		});
 	},
 	
-	substitute: function(html, data) {
-		var reg = /\{([^\}]+)\}/g; ///\{([\w-]+)\}/g;	
-		return html.replace(reg, function(el, key) {
-			var v = data[key];
-			return v === void 0 ? key : v;
-		});
-	},
-
 	show: function() {
 		this.el.forEach(function(e, i) {
 			e.style.display = 'block';

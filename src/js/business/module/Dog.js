@@ -2,8 +2,7 @@
  *author: spq 
  */
 Ext.define('business.module.Dog', {
-	extend: 'core.Component2',
-	renderTo: 'a',
+	extend: 'core.Component',
 	
 	//url: 'json/dogData.json',
 	data: {
