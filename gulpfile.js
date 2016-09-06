@@ -78,7 +78,6 @@ elixir(function (mix) {
         'core/RoleMap.js',
         'core/Observable.js',
         'core/Component.js',
-        'core/Component2.js',
         'core/DomHelper.js',
         'core/Template.js',
         'core/XTemplate.js',

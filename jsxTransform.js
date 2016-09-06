@@ -29,10 +29,12 @@ function transform(jsx) {
 	function t(str) {
 		return str.replace(/'/g, function(x) {
 			return '\\\'';
-		}).replace(/^[\t ]*(?=<)/mg, function(x) {
+		}).replace(/^[\t ]*/mg, function(x) {		//  ^[\t ]*(?=<)
 			return x + "'";
-		}).replace(/^\s*$/mg, '')	// 去空行
-		.replace(/\r?\n/mg, "',\n")		// 行末尾加',
+		})//.replace(/^\s*$/mg, '')	// 去空行
+		.replace(/\r?\n/mg, function(x, a) {
+			return "'," + x;
+		})		// 行末尾加',
 		.replace(/$/g, "'");			// 末尾加'
 	}
 }

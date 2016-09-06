@@ -49,9 +49,9 @@ Ext.define('core.Component', {
 	onRender : function(container, position) {
 		
 		this.template = this.template.constructor == Array ? this.template.join('') : this.template;
-		this.template = bon.render(this.data, this.template);
+		var html = bon.render(this.template, this.data);
 		
-		this.el.innerHTML = this.template;
+		this.el.innerHTML = html;
 	
 		if(container == undefined) {
 			return;
