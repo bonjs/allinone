@@ -27,6 +27,10 @@ function transform(jsx) {
 	});
 
 	function t(str) {
+		return str.replace(/'/g, "\\'").replace(/^(.*)$/mg, "'$1',") + "\n''";
+	}
+	
+	function t2222(str) {
 		return str.replace(/'/g, function(x) {
 			return '\\\'';
 		}).replace(/^[\t ]*/mg, function(x) {		//  ^[\t ]*(?=<)
